@@ -1,0 +1,28 @@
+@page
+@model ContactModel
+<h2>Contact</h2>
+
+<form method="post">
+    <div asp-validation-summary="All"></div>
+    <div>
+        <label asp-for="Input.FullName"></label>
+        <input asp-for="Input.FullName" />
+        <span asp-validation-for="Input.FullName"></span>
+    </div>
+    <div>
+        <label asp-for="Input.Email"></label>
+        <input asp-for="Input.Email" />
+        <span asp-validation-for="Input.Email"></span>
+    </div>
+    <div>
+        <label asp-for="Input.Message"></label>
+        <textarea asp-for="Input.Message"></textarea>
+        <span asp-validation-for="Input.Message"></span>
+    </div>
+    <button type="submit">Send</button>
+    @Html.AntiForgeryToken()
+</form>
+
+<partial name="_ValidationScriptsPartial" />
+
+
