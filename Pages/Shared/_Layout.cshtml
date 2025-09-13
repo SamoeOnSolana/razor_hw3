@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Профіль</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-white border-b">
+        <nav class="max-w-3xl mx-auto px-4">
+            <div class="flex justify-between h-10 items-center">
+                <a href="/" class="text-lg font-bold">Профіль</a>
+                <partial name="_Navigation" />
+            </div>
+        </nav>
+    </header>
+
+    <main class="max-w-3xl mx-auto py-4 px-4 min-h-screen">
+        @RenderBody()
+    </main>
+
+    <footer class="bg-gray-200 py-4 mt-16">
+        <div class="max-w-4xl mx-auto px-4 text-center text-gray-600">
+            © done by sasha | SamoeOnSol 
+        </div>
+    </footer>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
